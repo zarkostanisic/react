@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 // 1.
 // class App extends React.Component{
@@ -435,47 +436,113 @@ import ReactDOM from 'react-dom';
 // }
 
 // 12.
+// class App extends React.Component{
+//   constructor(props){
+//     super(props);
+//
+//     this.state = {
+//       data: [
+//         {
+//           component: 'First...',
+//           id: 1
+//         }, {
+//           component: 'Second...',
+//           id: 2
+//         }, {
+//           component: 'Third',
+//           id: 3
+//         }
+//       ]
+//     }
+//   }
+//
+//   render(){
+//     return(
+//       <div>
+//         <div>
+//           {this.state.data.map((dynamicComponent, i) =>
+//             <Content key = {i} componentData = {dynamicComponent}/>
+//           )}
+//         </div>
+//       </div>
+//     );
+//   }
+// }
+//
+// class Content extends React.Component{
+//   render(){
+//     return(
+//       <div>
+//         <div>{this.props.componentData.component}</div>
+//         <div>{this.props.componentData.id}</div>
+//       </div>
+//     );
+//   }
+// }
+
+// 13.
 class App extends React.Component{
-  constructor(props){
-    super(props);
+  render(){
+    return(
+      <Router>
+      <div>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
+        </ul>
 
-    this.state = {
-      data: [
-        {
-          component: 'First...',
-          id: 1
-        }, {
-          component: 'Second...',
-          id: 2
-        }, {
-          component: 'Third',
-          id: 3
-        }
-      ]
-    }
+        <hr />
+
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+      </div>
+    </Router>
+    );
   }
+}
 
+class Home extends React.Component{
   render(){
     return(
       <div>
-        <div>
-          {this.state.data.map((dynamicComponent, i) =>
-            <Content key = {i} componentData = {dynamicComponent}/>
-          )}
-        </div>
+        <h1>Home...</h1>
+      </div>
+    )
+  }
+}
+
+export {Home};
+
+class About extends React.Component{
+  render(){
+    return(
+      <div>
+        <h1>About...</h1>
       </div>
     );
   }
 }
 
-class Content extends React.Component{
+export {About};
+
+class Contact extends React.Component{
   render(){
     return(
       <div>
-        <div>{this.props.componentData.component}</div>
-        <div>{this.props.componentData.id}</div>
+        <h1>Contact...</h1>
       </div>
     );
   }
 }
+
+export  {Contact};
+
 export default App;
