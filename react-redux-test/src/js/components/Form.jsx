@@ -1,8 +1,11 @@
 import React, {Component} from 'react'
-import {connect} from 'react-redux'
 import  uuidv1 from 'uuid';
+
+// Redux
+import {connect} from 'react-redux'
 import {addArticle} from '../actions/index'
 
+// Redux
 function mapDispatchToProps(dispatch){
   return {
     addArticle: article => dispatch(addArticle(article))
@@ -29,7 +32,9 @@ class ConnectedForm extends Component{
     event.preventDefault();
     const {title} = this.state;
     const id = uuidv1();
+    // Redux
     this.props.addArticle({title, id});
+
     this.setState({title: ''});
   }
 
@@ -54,6 +59,7 @@ class ConnectedForm extends Component{
   }
 }
 
+// Redux
 const Form = connect(null, mapDispatchToProps)(ConnectedForm);
 
 export default Form;
