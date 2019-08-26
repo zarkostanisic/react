@@ -10,9 +10,11 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 render(
   // Redux - Provider and store
+  <div className="container-fluid">
   <Provider store={store}>
     <App />
-  </Provider>,
+  </Provider>
+  </div>,
   document.getElementById("root")
 );
 
