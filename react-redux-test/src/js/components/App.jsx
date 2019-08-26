@@ -1,4 +1,3 @@
-// src/js/components/App.jsx
 import React, {Component} from "react";
 import List from "./List";
 import Form from './Form';
