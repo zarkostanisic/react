@@ -10,5 +10,6 @@ const App = () => {
 // Take the react component and show it on the screen
 ReactDOM.render(
   <App/>,
-  document.getElementById('root')
+  // document.getElementById('root')
+  document.querySelector('#root')
 );
