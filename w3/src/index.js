@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Garage from './garage';
+import './App.css';
+import styles from './mystyle.module.css';
 
 // const myElement = (
 //   <div>
@@ -200,8 +202,27 @@ class MyForm extends React.Component{
   }
 }
 
+class MyHeader extends React.Component{
+
+  render(){
+    const myStyle = {
+      color: 'white',
+      backgroundColor: 'blue',
+      padding: '10px',
+      fontFamily: 'Arial'
+    };
+
+    return(
+      <div>
+        {/*}<h1 style={myStyle}>Hello Style!</h1>*/}
+        <h1 className={styles.bigBlue}>Hello Style!</h1>
+      </div>
+    );
+  }
+}
+
 // ReactDOM.render(myElement, document.getElementById('root'));
 ReactDOM.render(
-  <div>{/*<Garage size="big"/><Header favcol="yellow"/><Container/><Football/>*/}<MyForm/></div>,
+  <div>{/*<Garage size="big"/><Header favcol="yellow"/><Container/><Football/><MyForm/>*/}<MyHeader/></div>,
    document.getElementById('root')
  );
