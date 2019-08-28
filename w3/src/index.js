@@ -94,8 +94,34 @@ class Child extends React.Component{
   }
 }
 
+class Football extends React.Component{
+  // constructor(props){
+  //   super(props);
+  //
+  //   this.shoot = this.shoot.bind(this);
+  // }
+
+  // shoot = (a, b) => {
+  //   alert(a + " - " + b.type);
+  // }
+
+  shoot(a, b){
+    alert(a + ' - ' + b.type);
+  }
+
+  render(){
+    // return(
+    //   <button onClick={(ev) => this.shoot('Goal', ev)}>Take the shot!</button>
+    // );
+
+    return(
+      <button onClick={this.shoot.bind(this, 'Goal')}>Take the shot!</button>
+    );
+  }
+}
+
 // ReactDOM.render(myElement, document.getElementById('root'));
 ReactDOM.render(
-  <div><Garage size="big"/><Header favcol="yellow"/><Container/></div>,
+  <div><Garage size="big"/><Header favcol="yellow"/><Container/><Football/></div>,
    document.getElementById('root')
  );
