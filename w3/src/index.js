@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Garage from './garage';
 import './App.css';
 import styles from './mystyle.module.css';
+import './mysass.scss';
 
 // const myElement = (
 //   <div>
@@ -216,6 +217,7 @@ class MyHeader extends React.Component{
       <div>
         {/*}<h1 style={myStyle}>Hello Style!</h1>*/}
         <h1 className={styles.bigBlue}>Hello Style!</h1>
+        <h2>Test</h2>
       </div>
     );
   }
