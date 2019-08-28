@@ -10,5 +10,92 @@ import Garage from './garage';
 //   </div>
 // );
 
+class Header extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {favoriteColor: 'red'};
+  }
+
+  // static getDerivedStateFromProps(props, state){
+  //   return{favoriteColor: props.favcol};
+  // }
+
+  // componentDidMount(){
+  //   setTimeout(() => {
+  //     this.setState({favoriteColor: 'green'});
+  //   }, 1000);
+  // }
+
+  // shouldComponentUpdate(){
+  //   // return false;
+  //   return true;
+  // }
+
+  changeColor = () => {
+    this.setState({favoriteColor: 'blue'});
+  }
+
+  getSnapshotBeforeUpdate(prevProps, prevState){
+    document.getElementById('div1').innerHTML = 'Before the update, the favorite was ' + prevState.favoriteColor;
+  }
+
+  componentDidUpdate(){
+    document.getElementById('div2').innerHTML = 'The updated favorite is ' + this.state.favoriteColor;
+  }
+
+
+  render(){
+    return(
+      <div>
+        <h1>My Favorite Color is {this.state.favoriteColor}</h1>
+        <button onClick={this.changeColor}>Change color</button>
+        <div id="div1"></div>
+        <div id="div2"></div>
+      </div>
+    );
+  }
+}
+
+class Container extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {show: true};
+  }
+
+  delHeader = () => {
+    this.setState({show: false});
+  }
+
+  render(){
+    let myHeader;
+
+    if(this.state.show){
+      myHeader = <Child/>;
+    };
+
+    return(
+      <div>
+        {myHeader}
+        <button type="button" onClick={this.delHeader}>Delete Header</button>
+      </div>
+    );
+  }
+}
+
+class Child extends React.Component{
+  componentWillUnmount(){
+    alert('The component named Header is about to be unmounted');
+  }
+
+  render(){
+    return(
+      <h1>Hello World!</h1>
+    );
+  }
+}
+
 // ReactDOM.render(myElement, document.getElementById('root'));
-ReactDOM.render(<Garage size="big"/>, document.getElementById('root'));
+ReactDOM.render(
+  <div><Garage size="big"/><Header favcol="yellow"/><Container/></div>,
+   document.getElementById('root')
+ );
