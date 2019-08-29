@@ -6,26 +6,6 @@ import faker from 'faker';
 import CommentDetail from './components/CommentDetail';
 import ApprovalCard from './components/ApprovalCard';
 
-function getButtonText(){
-  return 'Click on me!';
-}
-
-// Create a react component
-// const App = () => {
-//   // const buttonText = ['Hi', 'There'];
-//   const buttonText = 'Click Me!';
-//   const style = {backgroundColor: 'blue', color: 'white'};
-//   const labelText = 'Enter name:';
-//
-//   return <div>
-//       <label  className="label" htmlFor="name">{labelText}</label>
-//       <input id="name" type="text"/>
-//       <button style={style}>
-//         {buttonText}
-//         {/*getButtonText()*/}
-//       </button>
-//     </div>;
-// }
 class App extends React.Component{
   render(){
     return(
