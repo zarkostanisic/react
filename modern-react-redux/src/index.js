@@ -8,12 +8,13 @@ function getButtonText(){
 
 // Create a react component
 const App = () => {
-  const buttonText = ['Hi', 'There'];
+  // const buttonText = ['Hi', 'There'];
+  const buttonText = 'Click Me!';
   const style = {backgroundColor: 'blue', color: 'white'};
   const labelText = 'Enter name:';
 
   return <div>
-      <label  className="label" for="name">{labelText}</label>
+      <label  className="label" htmlFor="name">{labelText}</label>
       <input id="name" type="text"/>
       <button style={style}>
         {buttonText}
