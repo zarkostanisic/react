@@ -3,11 +3,15 @@ import SearchBar from './SearchBar';
 import ImageList from './ImageList'
 
 class App extends React.Component{
+  onSearchSubmit(term){
+    console.log(term);
+  }
+
   render(){
     return(
       <div>
         <div className="ui container" style={{marginTop: '10px'}}>
-          <SearchBar/>
+          <SearchBar onSubmit={this.onSearchSubmit}/>
           {/*<ImageList/>*/}
         </div>
       </div>
