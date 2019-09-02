@@ -8,8 +8,11 @@ import ReactDOM from 'react-dom';
 // Seasons - Section 4, 5, 6
 // import App from './components/seasons/App';
 
-// Pics - Section 7
-import App from './components/pics/App';
+// Pics - Section 7, 8, 9, 10
+// import App from './components/pics/App';
+
+// Buildings - Section 11
+import App from './components/buildings/App';
 
 // Take the react component and show it on the screen
 ReactDOM.render(
