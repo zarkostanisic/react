@@ -1,6 +1,5 @@
 import React from 'react';
 
-import VideoDetail from './VideoDetail';
 import VideoItem from './VideoItem'
 
 class VideoList extends React.Component{
@@ -11,8 +10,7 @@ class VideoList extends React.Component{
 
     return (
       <div>
-        <VideoDetail/>
-        I have {this.props.videos.length} videos.
+        {/*I have {this.props.videos.length} videos.*/}
         <div className="ui list">
           {renderedList}
         </div>
