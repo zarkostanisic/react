@@ -11,8 +11,8 @@ import ReactDOM from 'react-dom';
 // Pics - Section 7, 8, 9, 10
 // import App from './components/pics/App';
 
-// Buildings - Section 11
-import App from './components/buildings/App';
+// Videos - Section 11
+import App from './components/videos/App';
 
 // Take the react component and show it on the screen
 ReactDOM.render(
