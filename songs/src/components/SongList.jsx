@@ -1,0 +1,19 @@
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
+class SongList extends Component{
+  render(){
+    console.log(this.props.songs);
+    return(
+      <div>SongList</div>
+    );
+  }
+}
+
+const mapStateToProps = (state) => {
+    return {
+        songs: state.songsReducer
+    };
+};
+
+export default connect(mapStateToProps)(SongList);
