@@ -31,7 +31,7 @@ class SongList extends Component{
 
 const mapStateToProps = (state) => {
     return {
-        songs: state.songsReducer
+        songs: state.songs
     };
 };
 
