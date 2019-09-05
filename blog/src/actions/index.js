@@ -25,8 +25,22 @@ export const fetchUser = (id) => async dispatch =>{
 //   dispatch({type: 'FETCH_USER', payload: repsonse.data});
 // });
 
-export const fetchPostsAndUsers = () => async dispatch => {
-  console.log('About to fetch posts');
+// Fetch posts and users
+// 1.
+// export const fetchPostsAndUsers = () => async (dispatch, getState) => {
+//   await dispatch(fetchPosts());
+//
+//   const userIds = _.uniq(_.map(getState().posts, 'userId'));
+//   userIds.forEach(id => dispatch(fetchUser(id)));
+// }
+
+// 2.
+export const fetchPostsAndUsers = () => async (dispatch, getState) => {
   await dispatch(fetchPosts());
-  console.log('Fetched posts!');
+
+  _.chain(getState().posts)
+    .map('userId')
+    .uniq()
+    .forEach(id => dispatch(fetchUser(id)))
+    .value();
 }
