@@ -23,7 +23,7 @@ class UserHeader extends Component{
 
 const mapStateToProps = (state, ownProps) => {
   return{
-    user: state.users.find(user => user.id == ownProps.userId)
+    user: state.users.find(user => user.id === ownProps.userId)
   }
 }
 
