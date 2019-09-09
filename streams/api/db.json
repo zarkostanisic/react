@@ -1,13 +1,15 @@
 {
   "streams": [
     {
-      "title": "t1",
-      "description": "d1",
+      "title": "Title 1",
+      "description": "Description 1",
+      "userId": "100804107232391293430",
       "id": 1
     },
     {
-      "title": "t2",
-      "description": "d2",
+      "title": "Title 2",
+      "description": "Description 2",
+      "userId": "100804107232391293430",
       "id": 2
     }
   ]
