@@ -1,46 +1,16 @@
 {
   "streams": [
     {
-      "title": "olkob",
-      "description": "ol",
+      "title": "Title 1",
+      "description": "Description 1",
       "userId": "100804107232391293430",
       "id": 1
     },
     {
-      "title": "asadfg",
-      "description": "asasd",
+      "title": "Title 2",
+      "description": "Description 2",
       "userId": "100804107232391293430",
       "id": 2
-    },
-    {
-      "title": "a",
-      "description": "a",
-      "id": 3,
-      "userId": "100804107232391293430"
-    },
-    {
-      "title": "cb",
-      "description": "cb",
-      "id": 4,
-      "userId": "100804107232391293430"
-    },
-    {
-      "title": "mo",
-      "description": "mo",
-      "userId": "100804107232391293430",
-      "id": 5
-    },
-    {
-      "title": "b",
-      "description": "b",
-      "userId": "100804107232391293430",
-      "id": 6
-    },
-    {
-      "title": "c",
-      "description": "c",
-      "userId": "100804107232391293430",
-      "id": 7
     }
   ]
 }

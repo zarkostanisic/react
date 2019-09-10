@@ -5,7 +5,7 @@ import {createStore, applyMiddleware, compose} from 'redux';
 import reduxThunk from 'redux-thunk';
 
 
-// Streams - Section 16, 17, 18, 19, 20
+// Streams - Section 16, 17, 18, 19, 20, 21
 import App from './components/App';
 import reducers from './reducers';
 
