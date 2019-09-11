@@ -6,7 +6,7 @@ class Field extends Component{
 
   render(){
     const text = this.context === 'english' ? 'Name' : 'Naam';
-    
+
     return(
       <div className="ui field">
         <label>{text}</label>
