@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// Translate - Section 23, 24
+// Hooks - Section 25
 import App from './components/App';
 
 ReactDOM.render(
