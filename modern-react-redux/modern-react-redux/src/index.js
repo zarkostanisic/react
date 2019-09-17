@@ -12,7 +12,10 @@ import ReactDOM from 'react-dom';
 // import App from './components/pics/App';
 
 // Videos - Section 11
-import App from './components/videos/App';
+// import App from './components/videos/App';
+
+// Seasons - Hooks - Section 26
+import App from './components/seasons-hooks/App';
 
 // Take the react component and show it on the screen
 ReactDOM.render(
