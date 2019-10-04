@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import ButtonBitcoin from '../components/ButtonBitcoin';
-import ButtonFootball from '../components/ButtonFootball';
-import News from '../components/News';
-import Loading from '../components/Loading';
+import ButtonBitcoin from './ButtonBitcoin';
+import ButtonFootball from './ButtonFootball';
+import News from './News';
+import Loading from './Loading';
 
 class App extends Component{
   render(){
@@ -10,8 +10,8 @@ class App extends Component{
       <div>
         <ButtonBitcoin/>
         <ButtonFootball/>
-        <News/>
         <Loading/>
+        <News/>
       </div>
     );
   }

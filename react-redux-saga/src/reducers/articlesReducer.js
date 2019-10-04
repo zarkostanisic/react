@@ -1,13 +1,15 @@
+import { GET_BITCOIN_NEWS, GET_FOOTBALL_NEWS, NEWS_RECEIVED } from '../actions/action-types';
+
 const INITIAL_STATE = {
   news: [],
   loading: false
 }
 const reducer = (state = INITIAL_STATE , action) => {
   switch(action.type){
-    case 'GET_BITCOIN_NEWS':
-    case 'GET_FOOTBALL_NEWS':
+    case GET_BITCOIN_NEWS:
+    case GET_FOOTBALL_NEWS:
       return { ...state, loading: true };
-    case 'NEWS_RECEIVED':
+    case NEWS_RECEIVED:
       return { ...state,  news: action.json, loading: false };
     default: 
       return state;
