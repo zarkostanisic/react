@@ -56300,13 +56300,12 @@ function (_Component) {
   _createClass(EditProduct, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      console.log('as');
       this.setState({
         updateProduct: {
-          title: this.props.location.state.product.title,
-          description: this.props.location.state.product.description,
-          price: this.props.location.state.product.price,
-          availability: this.props.location.state.product.availability
+          title: this.props.location.state.title,
+          description: this.props.location.state.description,
+          price: this.props.location.state.price,
+          availability: this.props.location.state.availability
         }
       });
     }
@@ -56325,7 +56324,7 @@ function (_Component) {
       var _this2 = this;
 
       e.preventDefault();
-      var currentProduct = this.props.location.state.product;
+      var currentProduct = this.props.location.state;
       var product = this.state.updateProduct;
       fetch('/api/products/' + currentProduct.id, {
         method: 'put',
@@ -56353,7 +56352,7 @@ function (_Component) {
     value: function render() {
       var _this3 = this;
 
-      var product = this.props.location.state.product;
+      var product = this.props.location.state;
 
       if (!product) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Please Select Product.");
@@ -56675,9 +56674,7 @@ function (_Component) {
         className: "btn btn-success",
         to: {
           pathname: "/".concat(product.id, "/edit"),
-          state: {
-            product: product
-          }
+          state: product
         }
       }, "Edit")));
     }
@@ -56708,8 +56705,8 @@ function (_Component) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\laravel\react-laravel\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\laravel\react-laravel\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\react\react-laravel\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\react\react-laravel\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

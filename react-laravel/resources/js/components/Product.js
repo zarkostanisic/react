@@ -24,9 +24,7 @@ class Product extends Component{
           <button className="btn btn-danger" onClick={this.props.onDelete}>DELETE</button>
           <Link className="btn btn-success" to={{
               pathname: `/${product.id}/edit`,
-              state: {
-                product: product
-              }
+              state: product
             }}>
               Edit
           </Link>

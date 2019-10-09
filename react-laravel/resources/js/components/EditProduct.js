@@ -20,13 +20,12 @@ class EditProduct extends Component{
   }
   
   componentDidMount(){
-    console.log('as');
     this.setState({
       updateProduct: {
-        title: this.props.location.state.product.title,
-        description: this.props.location.state.product.description,
-        price: this.props.location.state.product.price,
-        availability: this.props.location.state.product.availability
+        title: this.props.location.state.title,
+        description: this.props.location.state.description,
+        price: this.props.location.state.price,
+        availability: this.props.location.state.availability
       }
     });
   }
@@ -41,7 +40,7 @@ class EditProduct extends Component{
   handleSubmit(e){
     e.preventDefault();
     
-    const currentProduct = this.props.location.state.product;
+    const currentProduct = this.props.location.state;
     const product = this.state.updateProduct;
     
     fetch('/api/products/' + currentProduct.id, {
@@ -69,7 +68,7 @@ class EditProduct extends Component{
   }
   
   render(){
-    const product = this.props.location.state.product;
+    const product = this.props.location.state;
     
     if(!product){
       return(
